@@ -1,0 +1,84 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Train Scheduler</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script type="text/javascript" src="logic.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>Train Scheduler</h1>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="headerBlack">
+                Welcome to the Mexican train time table. Feel free to add any other trains you have knowledge of! 
+            </div>
+            <br>
+            <div id="current-time"></div>
+
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Train Name</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency (min)</th>
+                            <th scope="col">Minutes away</th>
+                            <th scope="col">Next arrival</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla">
+
+
+                    </tbody>
+                </table>
+                </blockquote>
+            </div>
+            <div id="card-wrapper">
+                <div class="page-header">
+                    <div class="card-header">
+                        Please enter the following information:
+                    </div>
+                    <div class="card-body">
+                        <form>
+                      
+                                <label for="trainName">Train Name</label>
+                                <input type="text" class="form-control" id="trainName" placeholder="Train Name">
+                                <br>
+                                <label for="destination">Destination</label>
+                                <input type="text" class="form-control" id="destination" placeholder="Eg. Monterrey">
+                                <br>
+                                <label for="frequency">Frequency</label>
+                                <input type="number" class="form-control" id="frequency" placeholder="Eg. 25min">
+                                <br>
+                                <label for="firstTrain">First Train Time</label>
+                                <input type="time" class="form-control input-group-addon" id="firstTrain" placeholder="Eg. 00:00">
+                               
+                                
+                                <br>
+                                <button id="addTrain" type="submit" class="btn btn-primary">Add</button>
+                        </form>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+
+</body>
+
+</html>
